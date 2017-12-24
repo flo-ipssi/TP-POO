@@ -2,8 +2,8 @@
     "name": "engineor/ipssi-oop-php-2017",
     "authors": [
         {
-            "name": "Thomas Dutrion",
-            "email": "thomas@engineor.com"
+            "name": "flo-ipssi",
+            "email": "flo-ipssi@github.com"
         }
     ],
     "require": {
@@ -13,9 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Application\\": "src/",
-            "Cinema\\": "cine/",
-            "Meeting\\": "meet/"
+            "Application\\": "classe/"
         }
     }
 }
