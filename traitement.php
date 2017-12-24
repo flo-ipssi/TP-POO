@@ -7,6 +7,6 @@ $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
 
 if (isset($_POST)) {
   $obj = new Application\Manager($bdd);
-  $obj->setUsers($_POST['nom'],$_POST['prenom'],$_POST['reunion']);
+  $obj->setUsers($_POST['nom'],$_POST['prenom'],$_POST['reunion'],$_POST['participe']);
 /*  header('location: index.php');*/
  }

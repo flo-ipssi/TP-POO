@@ -24,7 +24,7 @@ class ServicesManager
       $debut = date_format($debut, 'd-m-Y H:i');
       $fin = date_create($donnees['fin']);
       $fin = date_format($fin, 'd-m-Y H:i');
-      array_push($array, "<strong>".$donnees['titre']." ( ".$debut." - ".$fin." )  </strong><p>".$donnees['description']."<br/></p>");
+      array_push($array, "<strong>N° ".$donnees['id']." ".$donnees['titre']." ( ".$debut." - ".$fin." )  </strong><p>".$donnees['description']."<br/></p>");
     }
     return $array;
   }

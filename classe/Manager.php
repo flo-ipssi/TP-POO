@@ -14,22 +14,26 @@ class Manager
     $this->_bdd = $bdd;
   }
 
-  public function setUsers($nom,$prenom,$organisateur)
+  public function setUsers($nom,$prenom,$organisateur,$meeting)
   {
   	echo $nom;
-  	if ($organisateur == 0) {
-  		$q = $this->_bdd->prepare('INSERT INTO users(nom, prenom) VALUES(:nom, :prenom)');
-	    $q->bindValue($nom, PDO::PARAM_STR);
-	    $q->bindValue($prenom, PDO::PARAM_STR);
+  	if ($organisateur === '0') {
+  		$organisateur = NULL;
+  		$q = $this->_bdd->prepare('INSERT INTO users(nom, prenom, organisateur, meeting) VALUES(:nom, :prenom, :organisateur, :meeting)');
+	    $q->bindValue(':nom',$nom);
+	    $q->bindValue(':prenom',$prenom);
+	    $q->bindValue(':organisateur',$organisateur, PDO::PARAM_INT);
+	    $q->bindValue(':meeting',$meeting, PDO::PARAM_INT);
 	    print_r($q->errorInfo());
 	    $q->execute();
 	    return;
   	}
   	else{
-		$q = $this->_bdd->prepare('INSERT INTO users(nom, prenom, organisateur) VALUES(:nom, :prenom, :organisateur)');
-	    $q->bindValue($nom, PDO::PARAM_STR);
-	    $q->bindValue($prenom, PDO::PARAM_STR);
-	    $q->bindValue($organisateur, PDO::PARAM_INT);
+		$q = $this->_bdd->prepare('INSERT INTO users(nom, prenom, organisateur, meeting) VALUES(:nom, :prenom, :organisateur, :meeting)');
+	    $q->bindValue(':nom',$nom);
+	    $q->bindValue(':prenom',$prenom);
+	    $q->bindValue(':organisateur',$organisateur, PDO::PARAM_INT);
+	    $q->bindValue(':meeting',$meeting, PDO::PARAM_INT);
 	    print_r($q->errorInfo());
 	    $q->execute();
 	    return;
