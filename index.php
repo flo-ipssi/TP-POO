@@ -1,5 +1,8 @@
 <?php
-require 'classe/ServicesManager.php';
+if (!file_exists(__DIR__.'/vendor/autoload.php')) {
+    throw new Exception('Exec composer install');
+}
+require __DIR__.'/vendor/autoload.php';
 
 $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
 $obj = new Application\ServicesManager($bdd);

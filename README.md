@@ -1,6 +1,7 @@
 # Projet Php - poo
 
 Affiche la liste des Membres, des Meetings et des Participants
+Ajout des utilisateurs via la page ajout.php
 
 ## Liste 
 

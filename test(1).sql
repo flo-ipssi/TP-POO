@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 24 déc. 2017 à 21:09
+-- Généré le :  Dim 24 déc. 2017 à 22:49
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.0.23
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `organisateur`, `meeting`) VALUES
 (1, 'Emmanuel', 'Florian', NULL, 1),
-(2, 'Thomas', 'flo', NULL, 1);
+(2, 'Helene', 'Boucher', NULL, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
