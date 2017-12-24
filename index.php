@@ -5,6 +5,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
 $obj = new Application\ServicesManager($bdd);
 $tab = $obj->getList();
 $array = $obj->getUsers();
+$tbl = $obj->getParticipation();
 
 
 ?>
@@ -27,6 +28,14 @@ $array = $obj->getUsers();
   <ul>
     <?php
       foreach ($array as $key => $value) {
+        echo '<li>'.$value.'</li>';
+      }
+      ?>
+  </ul>
+  <h1>Liste des Participations</h1>
+  <ul>
+    <?php
+      foreach ($tbl as $key => $value) {
         echo '<li>'.$value.'</li>';
       }
       ?>

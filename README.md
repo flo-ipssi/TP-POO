@@ -1,6 +1,6 @@
 # Projet Php - poo
 
-Affiche la liste des Membres et la liste des Meetings 
+Affiche la liste des Membres, des Meetings et des Participants
 
 ## Liste 
 
