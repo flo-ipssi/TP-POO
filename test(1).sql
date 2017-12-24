@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 24 déc. 2017 à 19:34
+-- Généré le :  Dim 24 déc. 2017 à 21:09
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.0.23
 
@@ -56,6 +56,14 @@ CREATE TABLE IF NOT EXISTS `meet` (
   PRIMARY KEY (`id_meet`,`id_participant`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `meet`
+--
+
+INSERT INTO `meet` (`id_meet`, `id_participant`) VALUES
+(1, 1),
+(1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -78,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `meeting` (
 --
 
 INSERT INTO `meeting` (`id`, `debut`, `fin`, `titre`, `description`, `organisateur`) VALUES
-(1, '2017-12-15 00:00:00', '2017-12-15 03:00:00', 'Repas', 'C\'est le moment de manger ;', 1);
+(1, '2018-01-07 12:00:00', '2018-01-07 13:00:00', 'Repas', 'C\'est le moment de manger ;', 1);
 
 -- --------------------------------------------------------
 
@@ -94,14 +102,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `organisateur` int(11) DEFAULT NULL,
   `meeting` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `organisateur`, `meeting`) VALUES
-(1, 'test', 'test', NULL, 1);
+(1, 'Emmanuel', 'Florian', NULL, 1),
+(2, 'Thomas', 'flo', NULL, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
